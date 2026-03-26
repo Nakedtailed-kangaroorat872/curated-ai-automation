@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curated AI Automation - Browse AI-Powered Automation Tools</title>
+  <meta name="description" content="A curated, searchable directory of AI-powered automation tools, no-code platforms, and workflow builders." />
+  <link rel="canonical" href="https://awesome-ai-tools.github.io/curated-ai-automation/" />
+  <style>
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #e6edf3; --text-muted: #8b949e; --accent: #58a6ff;
+      --accent-hover: #79c0ff; --green: #3fb950; --purple: #bc8cff;
+      --featured-border: #58a6ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+    .header { text-align: center; padding: 3rem 1rem 2rem; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .header p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem; }
+    .badges { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    .badges img { height: 20px; }
+    .controls { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    .search-box { width: 100%; padding: 0.75rem 1rem; font-size: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; margin-bottom: 1rem; }
+    .search-box:focus { border-color: var(--accent); }
+    .search-box::placeholder { color: var(--text-muted); }
+    .filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .filter-btn { padding: 0.4rem 0.9rem; font-size: 0.85rem; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .type-filters { margin-top: 0.5rem; }
+    .type-filters .filter-btn.active { background: var(--green); border-color: var(--green); }
+    .result-count { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.75rem; }
+    .featured { max-width: 900px; margin: 1.5rem auto; padding: 1.5rem; background: linear-gradient(135deg, #1a1f35 0%, #161b22 100%); border: 1px solid var(--featured-border); border-radius: 12px; }
+    .featured-label { display: inline-block; background: var(--accent); color: var(--bg); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.75rem; }
+    .featured h2 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .featured p { color: var(--text-muted); margin-bottom: 0.75rem; }
+    .featured-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .featured-links a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; background: rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.3); border-radius: 6px; font-size: 0.9rem; }
+    .tools-container { max-width: 900px; margin: 0 auto; padding: 0 1rem 3rem; }
+    .category-heading { font-size: 1.3rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .tool-card { display: flex; justify-content: space-between; align-items: flex-start; padding: 1rem; margin-bottom: 0.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; transition: border-color 0.2s; }
+    .tool-card:hover { border-color: var(--accent); }
+    .tool-info { flex: 1; min-width: 0; }
+    .tool-name { font-weight: 600; font-size: 1rem; }
+    .tool-desc { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; }
+    .tool-badge { flex-shrink: 0; margin-left: 1rem; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 600; border-radius: 12px; white-space: nowrap; }
+    .badge-oss { background: rgba(63,185,80,0.15); color: var(--green); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-commercial { background: rgba(188,140,255,0.15); color: var(--purple); border: 1px solid rgba(188,140,255,0.3); }
+    .no-results { text-align: center; padding: 3rem 1rem; color: var(--text-muted); }
+    .submit-section { max-width: 900px; margin: 0 auto 3rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .submit-section h2 { margin-bottom: 0.5rem; }
+    .submit-section p { color: var(--text-muted); margin-bottom: 1rem; }
+    .submit-btn { display: inline-block; padding: 0.6rem 1.5rem; background: var(--accent); color: var(--bg); font-weight: 600; border-radius: 8px; font-size: 0.95rem; transition: background 0.2s; }
+    .submit-btn:hover { background: var(--accent-hover); text-decoration: none; }
+    .footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
+    @media (max-width: 600px) { .header h1 { font-size: 1.8rem; } .featured { margin-left: 1rem; margin-right: 1rem; } .tool-card { flex-direction: column; } .tool-badge { margin-left: 0; margin-top: 0.5rem; } }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>Curated AI Automation</h1>
+  <p>A searchable directory of AI-powered automation tools, no-code platforms, and workflow builders.</p>
+  <div class="badges">
+    <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+    <a href="https://github.com/awesome-ai-tools/curated-ai-automation"><img src="https://img.shields.io/github/stars/awesome-ai-tools/curated-ai-automation?style=social" alt="Stars" /></a>
+    <a href="https://github.com/awesome-ai-tools/curated-ai-automation/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" /></a>
+  </div>
+</div>
+<div class="controls" style="padding-bottom:0;">
+  <div class="featured">
+    <span class="featured-label">Featured</span>
+    <h2>Ssemble AI Clipping</h2>
+    <p>Automatically turn long videos into viral short clips using AI. Integrates with AI assistants like Claude via MCP server for seamless video content creation.</p>
+    <div class="featured-links">
+      <a href="https://www.npmjs.com/package/@ssemble/mcp-server">MCP Server (npm)</a>
+      <a href="https://www.ssemble.com">Visit ssemble.com</a>
+    </div>
+  </div>
+</div>
+<div class="controls">
+  <input type="text" class="search-box" id="searchBox" placeholder="Search tools... (e.g. n8n, chatbot, open source)" />
+  <div class="filters" id="categoryFilters"></div>
+  <div class="filters type-filters" id="typeFilters"></div>
+  <div class="result-count" id="resultCount"></div>
+</div>
+<div class="tools-container" id="toolsContainer"></div>
+<div class="submit-section">
+  <h2>Submit a Tool</h2>
+  <p>Know an AI automation tool that should be on this list?</p>
+  <a class="submit-btn" href="https://github.com/awesome-ai-tools/curated-ai-automation/issues/new?template=new-tool.yml">Suggest a Tool on GitHub</a>
+</div>
+<div class="footer">
+  <p>Curated AI Automation &mdash; maintained by <a href="https://github.com/awesome-ai-tools">awesome-ai-tools</a></p>
+  <p><a href="https://github.com/awesome-ai-tools/curated-ai-automation">GitHub</a> &middot; <a href="https://github.com/awesome-ai-tools/curated-ai-automation/blob/main/CONTRIBUTING.md">Contributing</a> &middot; <a href="https://github.com/awesome-ai-tools/curated-ai-automation/blob/main/LICENSE">MIT License</a></p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

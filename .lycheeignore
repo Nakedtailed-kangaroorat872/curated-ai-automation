@@ -1,0 +1,11 @@
+# Domains that frequently block automated link checkers
+https://www.linkedin.com/.*
+https://twitter.com/.*
+https://x.com/.*
+
+# Rate-limited or geo-restricted
+https://www.tiktok.com/.*
+
+# Known false positives
+https://awesome.re/badge.svg
+https://img.shields.io/.*

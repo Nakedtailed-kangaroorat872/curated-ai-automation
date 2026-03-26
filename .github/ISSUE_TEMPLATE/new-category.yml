@@ -1,0 +1,33 @@
+name: New Category Suggestion
+description: Suggest a new category for the list
+title: "[New Category] "
+labels: ["new-category"]
+body:
+  - type: input
+    id: category-name
+    attributes:
+      label: Category Name
+      description: Name of the proposed category
+      placeholder: e.g., AI Code Generation
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Category Description
+      description: Brief description of what this category covers
+    validations:
+      required: true
+  - type: textarea
+    id: tools
+    attributes:
+      label: Initial Tools
+      description: List at least 5 tools that would belong in this category
+      placeholder: |
+        1. Tool Name - https://url.com - Brief description
+        2. Tool Name - https://url.com - Brief description
+        3. Tool Name - https://url.com - Brief description
+        4. Tool Name - https://url.com - Brief description
+        5. Tool Name - https://url.com - Brief description
+    validations:
+      required: true
